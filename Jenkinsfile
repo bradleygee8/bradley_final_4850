@@ -21,6 +21,13 @@
                 sh "find . -type f -name '*.py' | xargs wc -l"
             }
         }
+         stage('Zip Artifacts') {
+            steps {
+                sh "zip exam.zip ./*.py"
+                archiveArtifacts artifacts: "exam.zip"
+            }
+        }
+
 }
 
 }
