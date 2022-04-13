@@ -18,7 +18,7 @@
         }}
         stage("Code Quantity"){
             steps{
-                sh "find . -type f -name '*.py' | xargs wc -l"
+                echo "find . -type f -name '*.py' | xargs wc -l"
             }
         }
 }
