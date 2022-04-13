@@ -5,7 +5,7 @@
     agent any
     parameters{
         choice(
-        TARGET: 'run')
+        name: 'TARGET')
         }
     stages{
         stage('Build'){
