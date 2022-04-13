@@ -3,12 +3,12 @@
 //Description
     pipeline{
     agent any
-    parameters{
-        choice(
-        choices: ['run'],
-        desciption:'If you have the parameters run  it will run the stage Run Scripts'
-        name: 'TARGET')
-        }
+    //parameters{
+       // choice(
+       // choices: ['run'],
+       // desciption:'If you have the parameters run  it will run the stage Run Scripts'
+       // name: 'TARGET')
+        //}
     stages{
         stage('Build'){
             steps{
