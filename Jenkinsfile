@@ -1,6 +1,6 @@
 //Name: Bradley Gee
 //April 13 2022
-//Description
+//Description: Installs the requirements, uses pylint to look for the code quality, runs the scripts and zips all of the files that end in .py
     pipeline{
     agent any
     parameters{
@@ -12,6 +12,7 @@
     stages{
         stage('Build'){
             steps{
+                echo "Name: A01031100 Group:21"
                 echo "Running the Requirements"
                 sh "pip install -r ./requirements.txt"
                 echo "Requirements Complete" 
@@ -47,4 +48,3 @@
 }
 
 }
-
