@@ -7,7 +7,7 @@
         stage('Build'){
             steps{
                 sh "pip install -r ./requirements.txt"
-                //sh "echo "Requirements Complete" 
+                echo "Requirements Complete" 
         }
         }
         stage("lint"){
