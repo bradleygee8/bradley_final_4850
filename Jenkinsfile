@@ -1,9 +1,11 @@
 //Name: Bradley Gee
 //April 13 2022
 //Description
-def call(TARGET) {
     pipeline{
     agent any
+    parameters{
+        TARGET: 'run'
+        }
     stages{
         stage('Build'){
             steps{
@@ -24,7 +26,7 @@ def call(TARGET) {
         }
         stage("Run Scripts"){
             when {
-                ${TARGET} == "run"
+                expression{params.TARGET == "run"}
             }
             steps{
                 sh "python3 main.py phone text output"
@@ -42,4 +44,4 @@ def call(TARGET) {
 }
 
 }
-}
+
