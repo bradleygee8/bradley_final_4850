@@ -6,15 +6,19 @@
     stages{
         stage('Build'){
             steps{
+                echo "Running the Requirements"
                 sh "pip install -r ./requirements.txt"
                 echo "Requirements Complete" 
         }
         }
-        stage("lint"){
+        stage("Code Quality"){
             steps{
                 sh "pylint --fail-under=7.0 ./*.py"
-                //$(find . -name "*.py" | xargs)
+                
         }}
+        stage("Code Quantity"){
+            sh 'find . -type f -name *\.py'
+        }
 }
 
 }
