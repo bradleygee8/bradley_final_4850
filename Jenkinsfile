@@ -23,6 +23,9 @@ def call(TARGET) {
             }
         }
         stage("Run Scripts"){
+            when {
+                ${TARGET} == "run"
+            }
             steps{
                 sh "python3 main.py phone text output"
                 sh "python3 main.py tablet csv ouput"
