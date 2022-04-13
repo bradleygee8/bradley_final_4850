@@ -21,7 +21,14 @@
                 sh "find . -type f -name '*.py' | xargs wc -l"
             }
         }
-         stage('Zip Artifacts') {
+        stage("Run Scripts"){
+            steps{
+                sh "python3 main.py phone text output"
+                sh "python3 main.py tablet csv ouput"
+                sh "python3 main.py laptop json ouput"
+            }
+        }
+         stage('Zip') {
             steps {
                 sh "zip exam.zip ./*.py"
                 archiveArtifacts artifacts: "exam.zip"
