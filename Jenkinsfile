@@ -6,7 +6,7 @@
     parameters{
         choice(
         choices: 'run',
-        desciption:'If you have the parameters run  it will run the stage Run Scripts'
+        description:'If you have the parameters run  it will run the stage Run Scripts',
         name: 'TARGET')
         }
     stages{
