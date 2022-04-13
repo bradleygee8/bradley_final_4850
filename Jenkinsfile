@@ -17,7 +17,7 @@
                 
         }}
         stage("Code Quantity"){
-            sh 'find . -type f -name *\.py'
+            sh 'find . -type f -name ./*.py'
         }
 }
 
