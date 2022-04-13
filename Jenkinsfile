@@ -4,7 +4,8 @@
     pipeline{
     agent any
     parameters{
-        TARGET: 'run'
+        choice(
+        TARGET: 'run')
         }
     stages{
         stage('Build'){
