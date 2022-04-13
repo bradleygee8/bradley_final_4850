@@ -1,6 +1,7 @@
 //Name: Bradley Gee
 //April 13 2022
 //Description
+def call(TARGET) {
     pipeline{
     agent any
     stages{
@@ -37,4 +38,5 @@
 
 }
 
+}
 }
